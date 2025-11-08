@@ -1,0 +1,159 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* BODY BACKGROUND: Dark Gray */
+    color: white; /* TEXT: Off-White */
+}
+
+.hero {
+    padding: 40px 20px;
+    background-color: #0d0d0d; /* HERO BACKGROUND: Near Black */
+}
+.hero h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.5rem;
+    color: #b8860b; /* ACCENT COLOR: Teal */
+    text-align: center;
+}
+.hero p {
+    margin: 0 0 40px 0;
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+    color: #f7f8c7; /* HERO SUBTEXT: Light Gray */
+    text-align: center;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Navigation Styling --- */
+nav {
+    /* Layout: logo left, links right */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 25px 20px;
+    background-color: #0d0d0d; /* NAVIGATION BACKGROUND: Near Black */
+}
+
+nav .logo {
+    color: #f0f0f0; /* NAVIGATION TEXT: Off-White */
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #f0f0f0; /* NAVIGATION LINK TEXT: Off-White */
+    /* ... other properties */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Darken link background on hover */
+    border-radius: 4px;
+    color: white; /* ACCENT COLOR: Teal on hover */
+}
+nav .logo img {
+    height: 120px; /* Control the logo size */
+    width: auto;
+    display: block;
+}
+
+/* Reset list styles and lay out links horizontally */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #b8860b;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+/* Responsive: stack nav elements vertically on narrow screens */
+@media (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    nav .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .photo-item {
+        max-width: 100%;
+        margin: 12px auto;
+    }
+}
+
+/* Gallery Layout */
+/* ... existing gallery properties ... */
+
+.gallery h2 {
+    font-size:2.2rem;
+    margin: 40px 0 25px 0;
+    color: #b8860b; /* ACCENT COLOR: Teal for headings */
+    text-align: center;
+}
+
+.photo-item {
+    background-color: #2a2a2a; /* PHOTO BOX BACKGROUND: Darker gray */
+    /* ... other properties */
+}
+
+/* Normalize image heights: set a fixed container height and make the image
+   fill it while preserving composition using object-fit. This keeps gallery
+   cards consistent even when source images have different aspect ratios. */
+.photo-item {
+    overflow: hidden;
+    height: 300px; /* uniform height for all photos; adjust as needed */
+    width: 100%;
+    max-width: 600px; /* optional: prevents overly wide items on large screens */
+    margin: 16px; /* spacing between items */
+    display: inline-block;
+    vertical-align: top;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop to fill while keeping aspect ratio */
+    display: block;
+}
+
+
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500; /* Subtle weight */
+    font-size: 0.95rem; /* Slightly smaller font */
+    color: #ccc; /* Slightly dimmed color */
+}
+
+footer {
+    padding: 20px;
+    background-color: #0d0d0d; /* FOOTER BACKGROUND: Near Black */
+    text-align: center;
+    color: #888;
+}

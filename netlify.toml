@@ -1,0 +1,2 @@
+[build]
+  publish = "." # Tells Netlify to deploy the contents of the root folder
