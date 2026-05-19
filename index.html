@@ -1,51 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography Geek Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+                url('images/IMG_9356.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .gallery-card img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
 </head>
-<body>
-    <header class="hero">
-        <nav>
-            <a href="index.html" class="logo">
-    <img src="images/photographygeek-logo.png.png" alt="Photography Geek Logo"></a>
+<body class="bg-black text-white antialiased">
+
+    <header class="hero-bg min-h-screen flex flex-col">
+
+        <nav class="flex items-center justify-between px-6 md:px-16 py-5 backdrop-blur-md bg-black/40 sticky top-0 z-50 border-b border-white/5">
             
-            <ul>
-                <li><a href="#featured">Work</a></li>
-                <li><a href="#gallery">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img 
+                    src="images/photographygeek-logo.png" 
+                    alt="Photography Geek Logo"
+                    class="w-12 h-12 object-cover rounded-full border border-yellow-400/30 group-hover:border-yellow-400 transition duration-300"
+                >
+                <span class="text-lg font-bold tracking-widest uppercase text-white group-hover:text-yellow-400 transition duration-300">
+                    Photography Geek
+                </span>
+            </a>
+
+            <ul class="hidden md:flex items-center gap-10 text-xs font-semibold uppercase tracking-[0.2em] text-gray-300">
+                <li>
+                    <a href="#gallery" class="hover:text-yellow-400 transition duration-300">
+                        Work
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="hover:text-yellow-400 transition duration-300">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="hover:text-yellow-400 transition duration-300">
+                        Contact
+                    </a>
+                </li>
             </ul>
+
         </nav>
-        <div class="hero-content">
-            <h1>Photography Geek </h1> 
-            <p>Capturing the world through a focused lens.</p>
+
+        <div class="flex-1 flex items-center justify-center text-center px-6">
+            <div class="max-w-3xl">
+
+                <p class="uppercase tracking-[0.5em] text-yellow-400 text-xs font-bold mb-4">
+                    Professional Photography
+                </p>
+
+                <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                    Capturing Moments <br>
+                    That Feel Alive
+                </h1>
+
+                <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Creative photography for events, portraits, lifestyle,
+                    and storytelling through a focused artistic lens.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#gallery"
+                       class="w-full sm:w-auto bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-300 text-sm uppercase tracking-wider shadow-lg shadow-yellow-400/10">
+                        View Gallery
+                    </a>
+
+                    <a href="#contact"
+                       class="w-full sm:w-auto border border-white/20 px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black hover:border-white transition duration-300 text-sm uppercase tracking-wider">
+                        Book a Session
+                    </a>
+                </div>
+
+            </div>
         </div>
     </header>
 
-    <main id="gallery" class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <figure class="photo-item">
-                <img src="images/IMG_9356.jpg" alt="Crazy Before Christmas">
-                <figcaption class="caption">Crazy Before Christmas</figcaption>
-            </figure>
+    <section id="gallery" class="py-28 px-6 md:px-16 bg-zinc-950">
 
-            <figure class="photo-item">
-                <img src="images/MLS_9421.jpg" alt="Home Shoot">
-                <figcaption class="caption">Event Photography</figcaption>
-            </figure>
+        <div class="text-center mb-20">
+            <p class="text-yellow-400 uppercase tracking-[0.4em] text-xs font-bold mb-3">
+                Portfolio
+            </p>
 
-            <figure class="photo-item">
-                <img src="images/IMG_5674.jpg" alt="Event Photo">
-                <figcaption class="caption">Event Photography</figcaption>
-            </figure>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+                Featured Work
+            </h2>
+
+            <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+                A curated collection of visual stories, raw emotions, and unforgettable moments.
+            </p>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Photography Geek. All rights reserved.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+            <figure class="gallery-card group overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 shadow-xl flex flex-col">
+                <div class="overflow-hidden aspect-[4/3] bg-zinc-800">
+                    <img 
+                        src="images/IMG_9356.jpg" 
+                        alt="Crazy Before Christmas"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+                </div>
+                <figcaption class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-yellow-400 transition duration-300">
+                            Crazy Before Christmas
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Cinematic festive photography with emotional storytelling and vibrant tones.
+                        </p>
+                    </div>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-card group overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 shadow-xl flex flex-col">
+                <div class="overflow-hidden aspect-[4/3] bg-zinc-800">
+                    <img 
+                        src="images/MLS_9421.jpg" 
+                        alt="Home Shoot"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+                </div>
+                <figcaption class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-yellow-400 transition duration-300">
+                            Home Shoot
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Lifestyle portrait session focused on natural lighting and authentic emotion.
+                        </p>
+                    </div>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-card group overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 shadow-xl flex flex-col">
+                <div class="overflow-hidden aspect-[4/3] bg-zinc-800">
+                    <img 
+                        src="images/IMG_5674.jpg" 
+                        alt="Event Photography"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+                </div>
+                <figcaption class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-yellow-400 transition duration-300">
+                            Event Photography
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Capturing high-energy moments with professional event coverage and sharp details.
+                        </p>
+                    </div>
+                </figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-28 px-6 md:px-16 bg-black">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            
+            <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-zinc-900 border border-white/5 shadow-2xl">
+                <img 
+                    src="images/MLS_9421.jpg"
+                    alt="Photographer Portrait"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                >
+            </div>
+
+            <div>
+                <p class="text-yellow-400 uppercase tracking-[0.4em] text-xs font-bold mb-4">
+                    About Me
+                </p>
+
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+                    Photography is more than taking pictures.
+                </h2>
+
+                <p class="text-gray-400 leading-relaxed mb-8 text-sm md:text-base">
+                    Photography Geek blends creativity, composition, and deep emotion into every single frame. From live events to intimate portraits, each assignment is engineered to lock in the moments that matter with professional precision.
+                </p>
+
+                <a href="#contact"
+                   class="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-400 hover:text-black transition duration-300 text-sm uppercase tracking-wider shadow-md">
+                    Let’s Work Together
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-28 px-6 md:px-16 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <p class="text-yellow-400 uppercase tracking-[0.4em] text-xs font-bold mb-4">
+                Get In Touch
+            </p>
+
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+                Ready to Create Something Amazing?
+            </h2>
+
+            <p class="text-gray-400 mb-12 text-sm md:text-base max-w-xl mx-auto">
+                Book your next photoshoot, corporate event coverage, or custom creative asset project today.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:hello@photographygeek.com"
+                   class="w-full sm:w-auto bg-yellow-400 text-black px-10 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-300 text-sm uppercase tracking-wider shadow-lg shadow-yellow-400/10">
+                    Email Me
+                </a>
+
+                <a href="#"
+                   class="w-full sm:w-auto border border-white/10 bg-zinc-900/50 px-10 py-4 rounded-full font-semibold hover:bg-white hover:text-black hover:border-white transition duration-300 text-sm uppercase tracking-wider">
+                    Instagram
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 py-10 text-center text-gray-600 text-xs bg-black tracking-wide">
+        <p>
+            &copy; 2026 Photography Geek. All rights reserved.
+        </p>
     </footer>
+
 </body>
 </html>
