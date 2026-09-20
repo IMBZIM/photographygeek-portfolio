@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | Photography Geek</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary {
+            color: #facc15;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <header class="border-b border-white/5 bg-zinc-950">
+        <nav class="flex items-center justify-between px-6 md:px-16 py-5">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img
+                    src="images/photographygeek-logo.png"
+                    alt="Photography Geek Logo"
+                    class="w-12 h-12 object-cover rounded-full border border-yellow-400/30 group-hover:border-yellow-400 transition duration-300"
+                >
+                <span class="text-lg font-bold tracking-widest uppercase text-white group-hover:text-yellow-400 transition duration-300">
+                    Photography Geek
+                </span>
+            </a>
+
+            <a href="index.html#booking" class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-300 hover:text-yellow-400 transition duration-300">
+                Book a session
+            </a>
+        </nav>
+    </header>
+
+    <main class="min-h-screen px-6 md:px-16 py-24 md:py-32">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-yellow-400 uppercase tracking-[0.4em] text-xs font-bold mb-4">
+                    Before You Book
+                </p>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+                    Frequently Asked Questions
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                    A few details about coverage, deposits, delivery, and planning your session with Photography Geek.
+                </p>
+            </div>
+
+            <div class="border-t border-white/10">
+                <details class="group border-b border-white/10 py-6">
+                    <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold transition duration-300">
+                        What does the $30 deposit cover?
+                        <span class="text-yellow-400 text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
+                        The upfront deposit secures the camera equipment and locks in your event date. The remaining balance is confirmed with your booking details.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 py-6">
+                    <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold transition duration-300">
+                        What is included in event coverage?
+                        <span class="text-yellow-400 text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
+                        Event coverage includes professional camera gear, transport and logistics, full coverage of the agreed time, and a high-resolution digital gallery.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 py-6">
+                    <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold transition duration-300">
+                        How much does coverage cost?
+                        <span class="text-yellow-400 text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
+                        Roora and event coverage is $50 per hour. Contact me with your date, location, and estimated coverage time for availability confirmation.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 py-6">
+                    <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold transition duration-300">
+                        When will I receive my photos?
+                        <span class="text-yellow-400 text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
+                        Delivery timing depends on the size and type of session. Your expected gallery timeline will be confirmed when your booking is arranged.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 py-6">
+                    <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold transition duration-300">
+                        How do I check availability?
+                        <span class="text-yellow-400 text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400">
+                        Complete the booking form with your preferred date, time, location, and project details. I will reply with availability and next steps.
+                    </p>
+                </details>
+            </div>
+
+            <div class="text-center mt-16">
+                <p class="text-gray-400 text-sm mb-6">Ready to plan your session?</p>
+                <a href="index.html#booking" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-300 text-sm uppercase tracking-wider shadow-lg shadow-yellow-400/10">
+                    Request Availability
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 py-10 text-center text-gray-600 text-xs bg-black tracking-wide">
+        <p>&copy; 2026 Photography Geek. All rights reserved.</p>
+    </footer>
+</body>
+</html>

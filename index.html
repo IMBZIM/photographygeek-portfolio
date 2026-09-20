@@ -32,6 +32,7 @@
         .gallery-card img {
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
     </style>
 </head>
 <body class="bg-black text-white antialiased">
@@ -65,6 +66,16 @@
                 <li>
                     <a href="#booking" class="hover:text-yellow-400 transition duration-300">
                         Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="faq.html" class="hover:text-yellow-400 transition duration-300">
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="pricing.html" class="hover:text-yellow-400 transition duration-300">
+                        Pricing
                     </a>
                 </li>
             </ul>
@@ -241,6 +252,13 @@
                 Send your details and I will confirm availability, recommend the right coverage, and reply with the next steps.
             </p>
 
+            <div class="text-center mb-12">
+                <p class="text-gray-300 text-lg font-semibold">Roora &amp; event coverage from $50/hour</p>
+                <p class="text-gray-500 text-sm mt-2">
+                    <a href="pricing.html" class="text-yellow-400 hover:text-yellow-300 transition">View full pricing and inclusions</a>
+                </p>
+            </div>
+
             <form name="booking-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid md:grid-cols-2 gap-6 text-left">
                 <input type="hidden" name="form-name" value="booking-request">
                 <p class="hidden">
@@ -299,6 +317,10 @@
 
             <p class="text-gray-500 text-xs text-center mt-6">
                 Prefer email? <a href="mailto:brandon@digitalrifttech.com" class="text-yellow-400 hover:text-yellow-300 transition">brandon@digitalrifttech.com</a>
+            </p>
+
+            <p class="text-gray-500 text-xs text-center mt-3">
+                Have questions first? <a href="faq.html" class="text-yellow-400 hover:text-yellow-300 transition">Read the FAQ</a>
             </p>
 
         </div>
